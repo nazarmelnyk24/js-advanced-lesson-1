@@ -1,0 +1,40 @@
+<div class="cenzor">
+    <div>
+        <span>
+            Bad words:
+            <span class="word-list" [textContent]='wordList'></span>
+        </span>
+    </div>
+    <form>
+        <div class="word-input">
+            <input 
+            type="text" 
+            [placeholder]='wordPlaceholder'
+            name="word"
+            [(ngModel)]='word'
+            >
+            <input 
+            type="button" 
+            value="Add"
+            (click)='addWord()'
+            >
+            <input 
+            type="button" 
+            value="Reset"
+            (click)='resetForm()'
+            >
+        </div>
+        <textarea 
+            [placeholder]='textPlaceholder'
+            name="text"
+            [(ngModel)]='text'
+        ></textarea>
+        <div>
+            <input 
+            type="button" 
+            value="Cenzor"
+            (click)='cenzorText()'
+            >
+        </div>
+    </form>
+</div>
