@@ -47,6 +47,7 @@ export class CenzorComponent implements OnInit {
 
   resetForm() {
     this.wordList = [];
+    this.wordListFormatted = '';
     this.word = '';
     this.text = '';
     this.wordPlaceholder = 'word here';
