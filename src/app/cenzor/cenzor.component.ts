@@ -11,6 +11,7 @@ export class CenzorComponent implements OnInit {
   public word = '';
   public text = '';
   public wordList: string[] = [];
+  public wordListFormatted = '';
   public wordPlaceholder = 'word here';
   public textPlaceholder = 'text here';
 
@@ -22,6 +23,7 @@ export class CenzorComponent implements OnInit {
   addWord() {
     if(this.word.trim().length > 0) {
       this.wordList = [...this.wordList, this.word];
+      this.wordListFormatted = this.wordList.join(' ');
       this.word = '';
       this.wordPlaceholder = 'word here';
     } else {
