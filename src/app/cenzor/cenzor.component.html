@@ -11,6 +11,7 @@
     <form>
         <div class="word-input">
             <input 
+            [ngStyle]="{'outline': setWordOutline()}"
             type="text" 
             [placeholder]='wordPlaceholder'
             name="word"
@@ -28,6 +29,7 @@
             >
         </div>
         <textarea 
+            [ngStyle]="{'outline': setTextOutline()}"
             [placeholder]='textPlaceholder'
             name="text"
             [(ngModel)]='text'
